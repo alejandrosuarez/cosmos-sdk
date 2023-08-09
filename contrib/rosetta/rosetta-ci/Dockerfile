@@ -20,7 +20,7 @@ WORKDIR /simd
 COPY . ./
 RUN cd simapp && go build -o simd ./simd/
 
-FROM alpine
+FROM alpine:3.18.3
 RUN apk add gcc git libc-dev python3 --no-cache
 
 ENV PATH=$PATH:/bin
